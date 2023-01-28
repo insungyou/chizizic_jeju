@@ -1,61 +1,124 @@
 <html>
-<head>
-  <title>치지직</title>
-  <style>
-    ul.menuList ol
-    {
-        display: contents;
-    }
-    ul.menuList ol img
-    {
-      width:100px;
-      display: inline;
-    }
-  </style>
-</head>
-<body style="
-    margin-left: 0px;
-    margin-right: 0px;
-">
-  <a>
-  <p style="
-    padding-top: 10%;
-    padding-bottom: 10%;
-    padding-left: 10%;
-    padding-right: 10%;
-    background-color: #00bcd4;
-    font-size: 300%;
-    color: white;
-    font-weight: bold;
-    font-family: sans-serif;
-">치지직</p>
-  </a>
-<ul style="
-    padding-left: 0px;
-">
-    <ol style="display: block;padding-left: 0px;"><center><h2 style="
-    margin-bottom: 30px;
-">크림 돼지 스테이크(미정)</h2></center><center><img src="./img/스테이크 1.jpg" style="
-    width: 520;
-"></center>
-<center><ul class="menuList" style="
-    padding-left: 0px;
-    padding-top: 20px;
-">
-    <ol><img class="selectedImg" src="./img/스테이크 1.jpg">
-</ol><ol><img src="./img/스테이크 2.jpg">
-</ol>
-<ol><img src="./img/스테이크 3.jpg">
-</ol>
-<ol><img src="./img/스테이크 4.jpg">
-</ol>
-<ol><img src="./img/스테이크 5.jpg">
-</ol>
-</ul></center></ol>
-    <ol>에그인헬</ol>
-</ul>
+  <head>
+    <script src="./js/jquery-3.6.3.min.js"></script>
+      <title>Chizizic_Jeju</title>
+      <style>
+        body, p, a, ul, ol, li
+        {
+          margin: 0px;
+          padding: 0px;
+        }
+
+
+        ul.subPhotos ol
+        {
+            display: contents;
+        }
+        ul.subPhotos ol img
+        {
+          width:17%;
+          margin-left: 2%;
+          margin-right: 2%;
+          display: inline;
+          border: outset;
+        }
+
+        #language ol
+        {
+          margin-bottom:10px;
+        }
 
 
 
-</body>
+        .menu
+        {
+          margin-bottom: 15%;
+        }
+
+        .menu .info
+        {
+          color: dimgray;
+        }
+
+        .menu .mainPhoto
+        {
+          width: 70%;
+          border: outset;
+        }
+      </style>
+  </head>
+  <body style="margin-left: 0px;margin-right: 0px;background-color:#e7dedb;">
+    <nav align="right" style="padding-left: 1%;padding-top: 1%;padding-right: 1%;padding-bottom: 1%;">
+        <h1 style="margin-right:2%; color:#b7755d;">Language</h1>
+        <ul align="center" id="language" style="background-color: #e7dedb;display: /*none;*/ flow-root;margin-left: 78%;position: absolute;padding-left: 6%;padding-right: 6%;padding-bottom: 10px;color: #b7755d;font-weight: bolder;">
+          <ol>한국어</ol>
+          <ol>English</ol>
+          <ol>中文</ol>
+          <ol>日本語</ol>
+        </ul>
+    </nav>
+    <div class="title">
+      <div align="center" style="padding-top: 10%;padding-bottom: 10%;padding-left: 10%;padding-right: 10%;background-color: #b7755d;font-size: 300%;color: white;font-weight: bold;font-family: sans-serif;margin-top: 0px">
+          <h1>치지직</h1>
+          <h3 style="
+      font-size: 0.8em;
+  ">우리의 설레임이 구워지는 소리</h3>
+        </div>
+    </div>
+    <div class="storeDescription">
+      <br>
+      <h3>영업시간 : 월,수,목,금,토,일 11:00 ~ 17:00 (화요일 휴무)</h3>
+      <br>
+      <br>
+    </div>
+    <div id="mainMenus">
+      <h1 align="center"><메인 메뉴></h1>
+      <div class="menu" align="center">
+        <ul style="padding-left: 0px;">
+          <ol style="display: block;padding-left: 0px;">
+              <img class="mainPhoto" src="./img/Menu List/1.Steak/Steak 1.jpg" >
+              <ul class="subPhotos" style="padding-left: 0px;padding-top: 20px;">
+                <ol><img src="./img/Menu List/1.Steak/Steak 1.jpg" style="border:groove;"></ol>
+                <ol><img src="./img/Menu List/1.Steak/Steak 2.jpg"></ol>
+                <ol><img src="./img/Menu List/1.Steak/Steak 3.jpg"></ol>
+              </ul>
+              <h2>크림 수비드 스테이크</h2>
+              <h3>가격 : 14,000원</h3>
+              <div class="info">
+                <h3>수비드로 조리한 제주산 돼지 안심 스테이크와 크림소스</h3>
+              </div>
+          </ol>
+        </ul>
+      </div>
+      <div class="menu" align="center">
+        <ul style="padding-left: 0px;">
+          <ol style="display: block;padding-left: 0px;">
+              <img class="mainPhoto" src="./img/Menu List/2.EggInHell/EggInHell1.jpg">
+              <ul class="subPhotos" style="padding-left: 0px;padding-top: 20px;">
+                <ol><img src="./img/Menu List/2.EggInHell/EggInHell1.jpg" style="border:groove;"></ol>
+                <ol><img src="./img/Menu List/2.EggInHell/EggInHell2.jpg"></ol>
+                <ol><img src="./img/Menu List/2.EggInHell/EggInHell3.jpg"></ol>
+              </ul>
+              <h1>에그인헬</h1>
+              <h2>가격 : 9,000원</h2>
+              <div class="info">
+                <h2>토마토소스에 반숙계란을 올리고, 각종야채와 향신료가 들어간 스튜</h2>
+              </div>
+          </ol>
+        </ul>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+            <h2>원산지 표기</h2>
+      <h2>원산지 표기</h2>
+      <h2>원산지 표기</h2>
+      <h2>원산지 표기</h2>
+    </div>
+
+  </body>
+  <script>
+    $("#nationalFlagList").
+  </script>
 </html>
