@@ -131,15 +131,10 @@ html, body, p, a, ul, ol, li
   }
 }
 
-
-
-
 span
 {
     display: block;
 }
-
-
 
 ul.subPhotos ol
 {
@@ -158,10 +153,12 @@ ul.subPhotos ol img
   margin-bottom:10px;
 }
 
-
 .menu
 {
-  margin-bottom: 147px;
+  margin-bottom: 100px;
+}
+.menu .album{
+  margin-bottom: 20px;
 }
 
 .menu .menuName
@@ -171,7 +168,7 @@ ul.subPhotos ol img
 .menu .menuPrice
 {
   font-size: 0.55em;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 .menu .info
 {
