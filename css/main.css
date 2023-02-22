@@ -131,6 +131,11 @@ html, body, p, a, ul, ol, li
   }
 }
 
+#language a{
+  margin-top:5px;
+  margin-bottom:5px; 
+}
+
 span
 {
     display: block;
