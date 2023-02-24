@@ -4,6 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <script src="./js/jquery-3.6.3.min.js"></script>
     <script src="./js/main.js"></script>
+    <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <link type="text/css" rel="stylesheet" href="./css/main.css">
     <link type="text/css" rel="stylesheet" href="./css/font.css">
     <link type="text/css" rel="stylesheet" href="./css/slide.css">
@@ -13,6 +14,9 @@
     <nav align="right" style="padding-left: 1%;padding-top: 1%;padding-right: 1%;padding-bottom: 1%;">
       <div style="display: inline-block; color: #878282;">
         <span align="center" style="width: 125px;padding-bottom: 5px;border-bottom: none;"><b style="font-size: 0.55em;font-family: 'Vitro_pride';" onclick="toggle_language()">Language</b></span>
+        <div id="test">
+
+        </div>
 <p id="language" align="center" style="
     font-size: 0.4em;
     background-color: #fff;
@@ -23,6 +27,7 @@
 ">
     <a style="
     display: block;
+">
 ">한국어</a><a style="
     display: block;
 ">English</a>
@@ -43,7 +48,8 @@
       <div align="center" class="storeDescription" style="font-family: 'Vitro_pride';">
           <span>영업시간 : 오전 11시 ~ 오후 9시<br>(라스트 오더 : 오후 8시 30분)</span>
           <span>휴무일 : 매주 화요일</span>
-          <span><img src="./img/main/instagram__icon.png" style="width: 25px;"> <a href="https://www.instagram.com/chizizic_jeju">chizizic_jeju</a></span></div>
+          <span><img src="./img/main/instagram__icon.png" style="width: 25px;">
+            <a href="https://www.instagram.com/chizizic_jeju">chizizic_jeju</a></span></div>
       <div id="mainMenus" style="font-family: 'Vitro_pride';">
         <span align="center"><b style="font-size: 0.7em;">&lt; MENU &gt;</b></span>
       <div class="menu" align="center">
@@ -80,12 +86,14 @@
   <script>
   const images = document.getElementsByClassName("images");
   var imageWidths = new Array;
+
   for (var i = 0; i < images.length; i++) {
     var image = images[i];
     imageWidths[i] = image.width;
     image.addEventListener('touchstart', touch_start);
     image.addEventListener('touchend', touch_end);
   }
+
   let curPos = 0;
   let postion = 0;
   let start_x, end_x;
@@ -140,9 +148,5 @@
       language.previousElementSibling.style.borderBottom = 'none';
     }
   }
-
   </script>
-
-
-
 </body></html>
