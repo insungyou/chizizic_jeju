@@ -27,32 +27,31 @@
 ">
     <a style="
     display: block;
-">
-">한국어</a><a style="
+" onclick="changeLanguage('korean')">한국어</a><a style="
     display: block;
-">English</a>
+" onclick="changeLanguage('english')">English</a>
 <a style="
     display: block;
-">中国话</a>
+" onclick="changeLanguage('chinese')">中国话</a>
 <a style="
     display: block;
-">日本語</a>
+" onclick="changeLanguage('japanese')">日本語</a>
 </p></div></nav>
 
     <div class="title">
       <div align="center" style="padding-top: 10%;padding-bottom: 10%;padding-left: 5%;padding-right: 5%;background-color: #bed3f1;color:white;font-weight: bold;font-family:sans-serif;margin-top: 0px;">
         <img src="./img/main/chizizic.png" style="width: 100%;">
         <!--<span style="font-size: 3em; display: none;">치지직</span>-->
-        <span style="padding-top: 4%;font-family: 'SF_HailSnow';font-size: 0.55em;">우리의 설레임이 구워지는 소리</span></div></div>
+        <span id="slogan" style="padding-top: 4%;font-family: 'SF_HailSnow';font-size: 0.55em;">우리의 설레임이 구워지는 소리</span></div></div>
     <div class="contents">
-      <div align="center" class="storeDescription" style="font-family: 'Vitro_pride';">
-          <span>영업시간 : 오전 11시 ~ 오후 9시<br>(라스트 오더 : 오후 8시 30분)</span>
-          <span>휴무일 : 매주 화요일</span>
+      <div align="center" id="storeDescription" style="font-family: 'Vitro_pride';">
+          <span class="businessHours">영업시간 : 오전 11시 ~ 오후 9시<br>(라스트 오더 : 오후 8시 30분)</span>
+          <span class="holiday">휴무일 : 매주 화요일</span>
           <span><img src="./img/main/instagram__icon.png" style="width: 25px;">
             <a href="https://www.instagram.com/chizizic_jeju">chizizic_jeju</a></span></div>
       <div id="mainMenus" style="font-family: 'Vitro_pride';">
         <span align="center"><b style="font-size: 0.7em;">&lt; MENU &gt;</b></span>
-      <div class="menu" align="center">
+      <div id="dongmoonSousVideSteak" class="menu" align="center">
         <div class="menu1 album">
           <div class="images">
             <img src="./img/Menu List/1.Steak/Steak 1.png">
@@ -65,20 +64,19 @@
           <div class="info">
             <span>수비드로 조리한 제주산 돼지 안심<br>스테이크와 양송이 크림소스의 만남</span>
           </div>
-        </div>
-        <div class="menu" align="center">
-          <div class="menu2 album">
-            <div class="images">
+      </div>
+      <div id="eggInHell" class="menu" align="center">
+        <div class="menu2 album">
+          <div class="images">
               <img src="./img/Menu List/2.EggInHell/EggInHell1.jpg">
               <img src="./img/Menu List/2.EggInHell/EggInHell2.jpg">
               <img src="./img/Menu List/2.EggInHell/EggInHell3.jpg">
-            </div>
           </div>
+        </div>
           <span class="menuName">에그인헬</span>
           <span class="menuPrice">9,000원</span>
           <div class="info">
             <span>토마토소스에 반숙계란을 올리고<br>각종 야채와 향신료를 넣은 스튜</span>
-            <span>(바질 수급이 어려울때 다른 채소로 대체)</span>
           </div>
         </div>
       </div>
@@ -147,6 +145,76 @@
       language.style.display = 'none';
       language.previousElementSibling.style.borderBottom = 'none';
     }
+  }
+
+  function changeLanguage(language){
+    var slogan = $("#slogan")[0];
+
+    var businessHours = $("#storeDescription .businessHours")[0];
+    var holiday = $("#storeDescription .holiday")[0];
+
+    var dongmoonSousVideSteakName = $("#dongmoonSousVideSteak .menuName")[0];
+    var dongmoonSousVideSteakPrice = $("#dongmoonSousVideSteak .menuPrice")[0];
+    var dongmoonSousVideSteakInfo = $("#dongmoonSousVideSteak .Info")[0];
+
+    var eggInHellName = $("#eggInHell .menuName")[0];
+    var eggInHellPrice = $("#eggInHell .menuPrice")[0];
+    var eggInHellInfo = $("#eggInHell .Info")[0];
+    switch (language) {
+      case 'korean':
+        slogan.innerText = "우리의 설레임이 구워지는 소리";
+        businessHours.innerText = "영업시간 : 오전 11시 ~ 오후 9시\r\n(라스트 오더 : 오후 8시 30분)";
+        holiday.innerText = "휴무일 : 매주 화요일";
+
+        dongmoonSousVideSteakName.innerText = "동문 수테이크";
+        dongmoonSousVideSteakPrice.innerText = "14,000원";
+        dongmoonSousVideSteakInfo.innerText = "수비드로 조리한 제주산 돼지 안심\r\n스테이크와 양송이 크림소스의 만남";
+
+        eggInHellName.innerText = "에그인헬";
+        eggInHellPrice.innerText = "9,000원";
+        eggInHellInfo.innerText = "토마토소스에 반숙계란을 올리고\r\n각종 야채와 향신료를 넣은 스튜";
+        break;
+      case 'english':
+        slogan.innerText = "The burning sound that makes us excited";
+        businessHours.innerText = "Welcome : AM 11:00 ~ PM 09:00\r\n(Last order : PM 08:30)";
+        holiday.innerText = "Holiday : Every Tuesday";
+
+        dongmoonSousVideSteakName.innerText = "Dongmoon Sous-Vide Steak";
+        dongmoonSousVideSteakPrice.innerText = "14,000won";
+        dongmoonSousVideSteakInfo.innerText = "Jeju pork tenderloin steaks cooked under vacuum & mushroom cream sauce";
+
+        eggInHellName.innerText = "Egg In Hell";
+        eggInHellPrice.innerText = "9,000won";
+        eggInHellInfo.innerText = "Stew with fresh vegetables seasoned with spices & Tomato Sauce topped with soft cooked egg";
+        break;
+      case 'japanese':
+        slogan.innerText = "私たちのときめきが焼ける音";
+        businessHours.innerText = "営業時間:午前11時~午後9時\r\n(ラストオーダー:午後8時30分)";
+        holiday.innerText = "休業日:毎週火曜日";
+
+        dongmoonSousVideSteakName.innerText = "同門ステイク";
+        dongmoonSousVideSteakPrice.innerText = "14,000ウォン";
+        dongmoonSousVideSteakInfo.innerText = "守備で調理した済州(チェジュ)産豚のバラ\r\nステーキと、西洋種のマツタケ、クリームソースの出会い";
+
+        eggInHellName.innerText = "エグインヘル";
+        eggInHellPrice.innerText = "9,000ウォン";
+        eggInHellInfo.innerText = "トマトソースに半熟の卵を上げて\r\n各種の野菜と香辛料を入れたシチュー";
+        break;
+      case 'chinese':
+        slogan.innerText = "我们的悸动 烤的声音";
+        businessHours.innerText = "营业时间 : 上午11点~下午9点\r\n(最后订单 下午8点30分)";
+        holiday.innerText = "休息日 : 每周二";
+
+        dongmoonSousVideSteakName.innerText = "东门牛排";
+        dongmoonSousVideSteakPrice.innerText = "14,000韩元";
+        dongmoonSousVideSteakInfo.innerText = "用低温慢煮 制作的 济州产猪里脊\r\n牛排和洋松茸 奶油酱的相遇";
+
+        eggInHellName.innerText = "北非蛋";
+        eggInHellPrice.innerText = "9,000韩元";
+        eggInHellInfo.innerText = "放上番茄酱和半熟鸡蛋 各种蔬菜和香料的炖菜";
+        break;
+    }
+    toggle_language();
   }
   </script>
 </body></html>

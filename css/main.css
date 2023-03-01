@@ -133,7 +133,7 @@ html, body, p, a, ul, ol, li
 
 #language a{
   margin-top:5px;
-  margin-bottom:5px; 
+  margin-bottom:5px;
 }
 
 span
@@ -172,11 +172,11 @@ span
   margin-top: 20px;
 }
 
-.storeDescription{
+#storeDescription{
   margin-top: 50px;
   margin-bottom: 50px;
 }
-.storeDescription span
+#storeDescription span
 {
   font-size:0.5em;
   margin-bottom: 15px;
