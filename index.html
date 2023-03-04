@@ -121,9 +121,9 @@
   }
 
   function touch_end(event) {
+    alert("touch end");
     end_x = event.changedTouches[0].pageX;
     if (start_x == end_x) {
-      alert("error");
       return;
     }
 
