@@ -120,16 +120,16 @@ var a = 0;
   function touch_start(event) {
     if (a != 0) {
       console.log(a++);
-      
+
     }
     start_x = event.touches[0]?.pageX;
   }
 
   function touch_end(event) {
     end_x = event.changedTouches[0].pageX;
-    if (start_x == end_x) {
+  /*  if (start_x == end_x) {
       return;
-    }
+    }*/
 
     if (start_x > end_x) {
       next(event.target.parentNode);
