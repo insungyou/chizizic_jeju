@@ -118,8 +118,8 @@
 
 var a = 0;
   function touch_start(event) {
-    if (a != 0) {
-      console.log(a++);
+    if (a++ != 0) {
+      console.log(a);
 
     }
     start_x = event.touches[0]?.pageX;
