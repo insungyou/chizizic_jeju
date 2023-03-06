@@ -88,9 +88,17 @@
   for (var i = 0; i < images.length; i++) {
     var image = images[i];
     imageWidths[i] = image.width;
-    image.addEventListener('touchstart', touch_start);
-    image.addEventListener('touchend', touch_end);
+  /*  image.addEventListener('touchstart', touch_start);
+    image.addEventListener('touchend', touch_end);*/
   }
+
+  var albums = $(".album");
+for (var i = 0; i < albums.length; i++) {
+  albums[i].addEventListener('touchstart', touch_start);
+  albums[i].addEventListener('touchend', touch_end);
+}
+
+
 
   let curPos = 0;
   let postion = 0;
@@ -117,6 +125,7 @@
   }
 
   function touch_start(event) {
+
     start_x = event.touches[0]?.pageX;
   }
 
