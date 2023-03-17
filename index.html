@@ -79,26 +79,24 @@
             <span>토마토소스에 각종 야채와 향신료를 넣고,<br>반숙계란을 올린 스튜</span>
           </div>
         </div>
-
-        <span align="center"><b style="font-size: 0.7em;">&lt; Drink &gt;</b></span>
-        <div id="cocaCola" class="menu" align="center">
-          <span class="menuName">코카콜라(355ml)</span>
-          <span class="menuPrice">2,000원</span>
-        </div>
-        <div id="chilsungSprite" class="menu" align="center">
-          <span class="menuName">칠성사이다(355ml)</span>
-          <span class="menuPrice">2,000원</span>
-        </div>
-
-        <span align="center"><b style="font-size: 0.7em;">&lt; Glass Wine &gt;</b></span>
-        <div id="chilsungSprite" class="menu" align="center">
+        <span align="center" style="margin-bottom: 15px;"><b style="font-size: 0.7em;">&lt; Glass Wine &gt;</b></span>
+        <div id="shiraz" class="menu" align="center" style="margin-bottom: 30px;">
           <span class="menuName">쉬라즈(레드)</span>
           <span class="menuPrice">7,000원</span>
         </div>
-        <div id="chilsungSprite" class="menu" align="center">
+        <div id="sauvignonBlanc" class="menu" align="center"style="margin-bottom: 30px;">
           <span class="menuName">쇼비뇽블랑(화이트)</span>
           <span class="menuPrice">7,000원</span>
         </div>
+        <span align="center" style="margin-top: 100px;margin-bottom: 15px;"><b style="font-size: 0.7em;">&lt; Drink &gt;</b></span>
+        <div id="cocaCola" class="menu" align="center" style="margin-bottom: 30px;">
+            <span class="menuName">코카콜라(355ml)</span>
+            <span class="menuPrice">2,000원</span>
+          </div>
+          <div id="chilsungSprite" class="menu" align="center">
+            <span class="menuName">칠성사이다(355ml)</span>
+            <span class="menuPrice">2,000원</span>
+          </div>
       </div>
     </div>
   <script>
@@ -189,6 +187,18 @@ for (var i = 0; i < albums.length; i++) {
     var eggInHellName = $("#eggInHell .menuName")[0];
     var eggInHellPrice = $("#eggInHell .menuPrice")[0];
     var eggInHellInfo = $("#eggInHell .Info")[0];
+
+    var shirazName = $("#shiraz .menuName")[0];
+    var shirazPrice = $("#shiraz .menuPrice")[0];
+
+    var sauvignonBlancName = $("#sauvignonBlanc .menuName")[0];
+    var sauvignonBlancPrice = $("#sauvignonBlanc .menuPrice")[0];
+
+    var cocaColaName = $("#cocaCola .menuName")[0];
+    var cocaColaPrice = $("#cocaCola .menuPrice")[0];
+
+    var chilsungSpriteName = $("#chilsungSprite .menuName")[0];
+    var chilsungSpritePrice = $("#chilsungSprite .menuPrice")[0];
     switch (language) {
       case 'korean':
         slogan.innerText = "우리의 설레임이 구워지는 소리";
@@ -202,6 +212,18 @@ for (var i = 0; i < albums.length; i++) {
         eggInHellName.innerText = "에그인헬";
         eggInHellPrice.innerText = "10,000원";
         eggInHellInfo.innerText = "토마토소스에 각종 야채와 향신료를 넣고, \r\n 반숙계란을 올린 스튜";
+
+        shirazName.innerText = "쉬라즈(레드)";
+        shirazPrice.innerText = "7,000원";
+
+        sauvignonBlancName.innerText = "쇼비뇽블랑(화이트)";
+        sauvignonBlancPrice.innerText = "7,000원";
+
+        cocaColaName.innerText = "코카콜라(355ml)";
+        cocaColaPrice.innerText = "2,000원";
+
+        chilsungSpriteName.innerText = "칠성사이다(355ml)";
+        chilsungSpritePrice.innerText = "2,000원";
         break;
       case 'english':
         slogan.innerText = "Grilling sound that blows your mind";
@@ -215,6 +237,19 @@ for (var i = 0; i < albums.length; i++) {
         eggInHellName.innerText = "Egg In Hell";
         eggInHellPrice.innerText = "10,000won";
         eggInHellInfo.innerText = "Stew with fresh vegetables seasoned with spices & Tomato Sauce topped with sunny side up";
+
+        shirazName.innerText = "Shiraz(Red)";
+        shirazPrice.innerText = "7,000won";
+
+        sauvignonBlancName.innerText = "Sauvignon Blanc(White)";
+        sauvignonBlancPrice.innerText = "7,000won";
+
+        cocaColaName.innerText = "Coca Cola(355ml)";
+        cocaColaPrice.innerText = "2,000won";
+
+        chilsungSpriteName.innerText = "Chilsung Sprite(355ml)";
+        chilsungSpritePrice.innerText = "2,000won";
+
         break;
       case 'japanese':
         slogan.innerText = "私たちをトキメかせる音、ジュー";
@@ -228,6 +263,18 @@ for (var i = 0; i < albums.length; i++) {
         eggInHellName.innerText = "シャクシュカ";
         eggInHellPrice.innerText = "10,000ウォン";
         eggInHellInfo.innerText = "細かく刻んだ野菜をスパイスを効かせたトマトソースで軽く煮込み、その上に卵を落として焼いたシチュー";
+
+        shirazName.innerText = "Shiraz(Red)";
+        shirazPrice.innerText = "7,000ウォン";
+
+        sauvignonBlancName.innerText = "Sauvignon Blanc(White)";
+        sauvignonBlancPrice.innerText = "7,000ウォン";
+
+        cocaColaName.innerText = "Coca Cola(355ml)";
+        cocaColaPrice.innerText = "2,000ウォン";
+
+        chilsungSpriteName.innerText = "Chilsung Sprite(355ml)";
+        chilsungSpritePrice.innerText = "2,000ウォン";
         break;
       case 'chinese':
         slogan.innerText = "我们的悸动 烤的声音";
@@ -241,6 +288,18 @@ for (var i = 0; i < albums.length; i++) {
         eggInHellName.innerText = "北非蛋";
         eggInHellPrice.innerText = "10,000韩元";
         eggInHellInfo.innerText = "各种蔬菜和香料 加上半熟鸡蛋和番茄酱 融合而成的炖菜";
+
+        shirazName.innerText = "Shiraz(红色)";
+        shirazPrice.innerText = "7,000韩元";
+
+        sauvignonBlancName.innerText = "Sauvignon Blanc(白色)";
+        sauvignonBlancPrice.innerText = "7,000韩元";
+
+        cocaColaName.innerText = "可口可乐(355毫升)";
+        cocaColaPrice.innerText = "2,000韩元";
+
+        chilsungSpriteName.innerText = "七星汽水(355毫升)";
+        chilsungSpritePrice.innerText = "2,000韩元";
         break;
     }
     toggle_language();
